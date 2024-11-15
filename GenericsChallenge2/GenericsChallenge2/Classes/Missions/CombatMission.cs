@@ -1,4 +1,4 @@
-﻿namespace GenericsChallenge2.Classes
+﻿namespace GenericsChallenge2.Classes.Missions
 {
     public class CombatMission<T> : Mission<T>
     {
