@@ -18,9 +18,15 @@ namespace GenericsChallenge2.Classes
 
         public void Push(T item)
         {
-            T[] temp = new T[0];
-            Array.Copy(Items, temp, Items.Length + 1);
+            T[] temp = new T[Items.Length + 1];
+
+            for (int i = 0; i < Items.Length; i++)
+            {
+                temp[i] = Items[i];
+            }
+
             temp[^1] = item;
+
             Items = temp;
         }
         public void Pop()
