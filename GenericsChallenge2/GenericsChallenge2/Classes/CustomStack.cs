@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace GenericsChallenge2.Classes
 {
@@ -18,20 +13,17 @@ namespace GenericsChallenge2.Classes
 
         public void Push(T item)
         {
-            T[] temp = new T[0];
-            Array.Copy(Items, temp, Items.Length + 1);
+            T[] temp = new T[Items.Length + 1];
+            Array.Copy(Items, temp, Items.Length);
             temp[^1] = item;
             Items = temp;
         }
         public void Pop()
         {
             T[] temp = new T[Items.Length - 1];
-
-            for (int i = 0; i < Items.Length - 1; i++)
-            {
-                temp[i] = Items[i];
-            }
+            Array.Copy(Items, temp, Items.Length - 1);
             Items = temp;
+
         }
 
         public IEnumerator<T> GetEnumerator()

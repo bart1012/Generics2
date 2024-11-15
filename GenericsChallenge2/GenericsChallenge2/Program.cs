@@ -1,6 +1,4 @@
 ﻿using GenericsChallenge2.Classes;
-using System.Security.Cryptography.X509Certificates;
-
 namespace GenericsChellenge
 {
     internal class Program
@@ -40,13 +38,21 @@ namespace GenericsChellenge
             }*/
 
             int[] numbers = { 1, 2, 3 };
+            /*   int[] numbers2 = new int[numbers.Length - 1];
+               Array.Copy(numbers, numbers2, numbers.Length - 1);
+
+               for (int i = 0; i < numbers2.Length; i++)
+               {
+                   Console.WriteLine(numbers2[i]);
+               }
+   */
             CustomStack<int> stack1 = new CustomStack<int>(numbers);
             foreach (int i in stack1)
             {
                 Console.WriteLine(i);
             }
 
-            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------");
 
             stack1.Pop();
 
@@ -55,9 +61,19 @@ namespace GenericsChellenge
                 Console.WriteLine(i);
             }
 
+            //foreach (int i in stack1)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
             Console.WriteLine();
 
             stack1.Push(6);
+
+            foreach (int i in stack1)
+            {
+                Console.WriteLine(i);
+            }
 
 
         }
