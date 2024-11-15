@@ -1,10 +1,17 @@
 ﻿namespace GenericsChallenge2.Classes
 {
-    abstract class Mission<T>
+    public abstract class Mission<T>
     {
         public string Location { get; private set; }
         public int Reward { get; private set; }
-        public List<T> HeroesDeployed { get; }
+        public List<T> HeroesDeployed { get; private set; }
+
+        protected Mission(string location, int reward)
+        {
+            Location = location;
+            Reward = reward;
+            HeroesDeployed = new List<T>();
+        }
     }
 }
 

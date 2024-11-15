@@ -1,4 +1,5 @@
 ﻿using GenericsChallenge2.Classes;
+using GenericsChallenge2.Interfaces;
 namespace GenericsChellenge
 {
     internal class Program
@@ -37,43 +38,48 @@ namespace GenericsChellenge
                 Console.WriteLine(book);
             }*/
 
-            int[] numbers = { 1, 2, 3 };
-            /*   int[] numbers2 = new int[numbers.Length - 1];
-               Array.Copy(numbers, numbers2, numbers.Length - 1);
+            /*   int[] numbers = { 1, 2, 3 };
+               *//*   int[] numbers2 = new int[numbers.Length - 1];
+                  Array.Copy(numbers, numbers2, numbers.Length - 1);
 
-               for (int i = 0; i < numbers2.Length; i++)
+                  for (int i = 0; i < numbers2.Length; i++)
+                  {
+                      Console.WriteLine(numbers2[i]);
+                  }
+      *//*
+               CustomStack<int> stack1 = new CustomStack<int>(numbers);
+               foreach (int i in stack1)
                {
-                   Console.WriteLine(numbers2[i]);
+                   Console.WriteLine(i);
                }
-   */
-            CustomStack<int> stack1 = new CustomStack<int>(numbers);
-            foreach (int i in stack1)
-            {
-                Console.WriteLine(i);
-            }
 
-            Console.WriteLine("--------------------------------------------");
+               Console.WriteLine("--------------------------------------------");
 
-            stack1.Pop();
+               stack1.Pop();
 
-            foreach (int i in stack1)
-            {
-                Console.WriteLine(i);
-            }
+               foreach (int i in stack1)
+               {
+                   Console.WriteLine(i);
+               }
 
-            //foreach (int i in stack1)
-            //{
-            //    Console.WriteLine(i);
-            //}
+               //foreach (int i in stack1)
+               //{
+               //    Console.WriteLine(i);
+               //}
 
-            Console.WriteLine();
+               Console.WriteLine();
 
-            stack1.Push(6);
+               stack1.Push(6);
 
-            foreach (int i in stack1)
-            {
-                Console.WriteLine(i);
-            }
+               foreach (int i in stack1)
+               {
+                   Console.WriteLine(i);
+               }*/
+
+
+            RescueMission<Gadgeteer> strandedCat = new RescueMission<Gadgeteer>("tree", 50);
+            var bugInMyCode = new RescueMission<ITech>("zoom", 1000);
+            var armWrestlingCompetition = new CombatMission<IStrength>("beach", 20);
 
 
         }
