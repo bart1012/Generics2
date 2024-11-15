@@ -2,7 +2,7 @@
 {
     public interface IStrength
     {
-        public int StrengthLevel { get; protected set; }
+        public int StrengthLevel { get; set; }
 
         void Lift(string alias)
         {

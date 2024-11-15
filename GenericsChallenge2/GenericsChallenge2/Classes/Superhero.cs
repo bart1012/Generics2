@@ -1,4 +1,6 @@
-﻿namespace GenericsChallenge2.Classes
+﻿using GenericsChallenge2.Enums;
+
+namespace GenericsChallenge2.Classes
 {
     abstract class Superhero
     {

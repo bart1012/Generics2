@@ -2,7 +2,7 @@
 {
     public interface ITelepathy
     {
-        public int PowerLevel { get; protected set; }
+        public int PowerLevel { get; set; }
 
         void ReadMind(string alias)
         {

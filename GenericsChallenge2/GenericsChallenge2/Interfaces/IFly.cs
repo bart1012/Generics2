@@ -2,8 +2,8 @@
 {
     public interface IFly
     {
-        public double FlightSpeed { get; protected set; }
-        public double MaxHeight { get; protected set; }
+        public double FlightSpeed { get; set; }
+        public double MaxHeight { get; set; }
 
         void Fly(string alias)
         {
