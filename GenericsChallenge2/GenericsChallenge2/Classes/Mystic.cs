@@ -1,4 +1,5 @@
-﻿using GenericsChallenge2.Interfaces;
+﻿using GenericsChallenge2.Enums;
+using GenericsChallenge2.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,8 +15,16 @@ namespace GenericsChallenge2.Classes
         public double MaxHeight { get; set; }
         public int PowerLevel { get; set; }
 
-        public Mystic(double flightSpeed, double maxHeight, int powerLevel, )
-            : base()
+        public Mystic(
+            double flightSpeed, 
+            double maxHeight, 
+            int powerLevel, 
+            string alias, 
+            string secretIdentity, 
+            int age, 
+            Alignment alignment
+            )
+            : base(alias, secretIdentity, age, alignment)
         {
             FlightSpeed = flightSpeed;
             MaxHeight = maxHeight;

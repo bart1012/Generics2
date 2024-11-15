@@ -2,7 +2,7 @@
 {
     public interface ITech
     {
-        public string Gadget { get; protected set; }
+        public string Gadget { get; set; }
 
         void Hack(string alias)
         {
