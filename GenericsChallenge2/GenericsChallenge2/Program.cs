@@ -1,4 +1,5 @@
 ﻿using GenericsChallenge2.Classes;
+using GenericsChallenge2.Enums;
 using GenericsChallenge2.Interfaces;
 namespace GenericsChellenge
 {
@@ -77,11 +78,16 @@ namespace GenericsChellenge
                }*/
 
 
-            RescueMission<Gadgeteer> strandedCat = new RescueMission<Gadgeteer>("tree", 50);
-            var bugInMyCode = new RescueMission<ITech>("zoom", 1000);
+            RescueMission<IFly> strandedCat = new RescueMission<IFly>("tree", 50);
+
+            var bugInMyCode = new RescueMission<Gadgeteer>("zoom", 1000);
             var armWrestlingCompetition = new CombatMission<IStrength>("beach", 20);
 
+            var reyzhen = new Mystic("Michael", "Reyzhen", 7000, Alignment.GOOD);
+            strandedCat.HeroesDeployed.Add(reyzhen); // All good
 
+            //var rich = new Gadgeteer("Rich", "The Developer", 33, Alignment.EVIL);
+            //strandedCat.HeroesDeployed.Add(rich); // Should provide a compile time error
         }
     }
 }

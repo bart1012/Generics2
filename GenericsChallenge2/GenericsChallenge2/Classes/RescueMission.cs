@@ -1,8 +1,6 @@
-﻿using GenericsChallenge2.Interfaces;
-
-namespace GenericsChallenge2.Classes
+﻿namespace GenericsChallenge2.Classes
 {
-    public class RescueMission<T> : Mission<T> where T : IFly, ITech
+    public class RescueMission<T> : Mission<T>
     {
         public RescueMission(string location, int reward) : base(location, reward)
         {

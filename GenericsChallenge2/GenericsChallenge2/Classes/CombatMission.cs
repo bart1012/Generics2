@@ -1,8 +1,6 @@
-﻿using GenericsChallenge2.Interfaces;
-
-namespace GenericsChallenge2.Classes
+﻿namespace GenericsChallenge2.Classes
 {
-    public class CombatMission<T> : Mission<T> where T : IStrength
+    public class CombatMission<T> : Mission<T>
     {
         public CombatMission(string location, int reward) : base(location, reward)
         {

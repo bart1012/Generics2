@@ -4,7 +4,7 @@
     {
         public string Location { get; private set; }
         public int Reward { get; private set; }
-        public List<T> HeroesDeployed { get; private set; }
+        public List<T> HeroesDeployed { get; set; }
 
         protected Mission(string location, int reward)
         {
