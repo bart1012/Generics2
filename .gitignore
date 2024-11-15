@@ -128,3 +128,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+/GenericsChallenge2/.vs
+/.gitignore
+/GenericsChallenge2/GenericsChallenge2/Program.cs
